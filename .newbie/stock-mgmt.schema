@@ -90,8 +90,8 @@ model SkuTrail {
   warehouseSkuId     Int
   unitOfMeasurement  UnitOfMeasurement
   valueOfMeasurement Float
-  priceOfUnit        Float
-  priceOfTotal       Float
+  priceOfUnit        Int // in cents
+  priceOfTotal       Int // in cents
   createdAt          DateTime          @default(now())
   updatedAt          DateTime          @updatedAt
   warehouse          Warehouse         @relation(fields: [warehouseId], references: [id])
